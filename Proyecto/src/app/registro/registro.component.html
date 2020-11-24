@@ -1,1 +1,20 @@
-<p>registro works!</p>
+
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="container">
+    <div>
+        Nombre de usuario
+        <input type="email" [(ngModel)]="usuario.username" #em="ngModel" required />
+    </div>
+    <div>
+        Email
+        <input type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true" />
+    </div>
+    <div>
+        Conraseña
+        <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" required />
+    </div>
+    <div>
+        <input type="button" (click)="new()" value="Crear usuario"/>
+    </div>
+
+
+  </div>

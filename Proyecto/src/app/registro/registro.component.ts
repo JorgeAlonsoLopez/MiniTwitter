@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistroDto } from '../dto/RegistroDto';
+import { RegistroService } from '../services/registro.service';
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { }
+  usuario: RegistroDto;
+
+  constructor(private registroService: RegistroService) { 
+    this.usuario = new RegistroDto('', '', '');
+  }
 
   ngOnInit(): void {
+  }
+
+  new() {
+    this.registroService.new(this.usuario).subscribe(respuesta => {
+        alert('Registro correcto');
+        //localStorage.setItem('token', respuesta.token);
+    });
   }
 
 }

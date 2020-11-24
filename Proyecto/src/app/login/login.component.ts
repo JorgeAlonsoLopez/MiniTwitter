@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginService.login(this.usuario).subscribe(respuesta => {
-        alert('API TOKEN ' + respuesta.token);
+        alert('Login correcto');
         localStorage.setItem('token', respuesta.token);
     });
   }
