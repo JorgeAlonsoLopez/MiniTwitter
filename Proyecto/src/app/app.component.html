@@ -1,2 +1,5 @@
+<div *ngIf="menu">
+    <a type="button" [routerLink]="['registro']" (click)="elecc()">Resgistrarse</a>
+    <a type="button" [routerLink]="['login']" (click)="elecc()">Iniciar sesión</a>
+</div>
 <router-outlet></router-outlet>
-<app-registro></app-registro>

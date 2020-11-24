@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  menu:boolean = true;
   title = 'Proyecto';
+  ngOnInit(): void {
+
+  }
+  elecc() {
+    this.menu=false;
+  }
 }

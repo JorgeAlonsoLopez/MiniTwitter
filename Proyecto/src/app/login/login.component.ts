@@ -8,7 +8,7 @@ import { LoginService } from '../services/login.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  acceso:boolean = true;
   usuario: LoginDto;
 
   constructor(private loginService: LoginService) { 
@@ -16,12 +16,14 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.acceso=false;
   }
 
   login() {
     this.loginService.login(this.usuario).subscribe(respuesta => {
         alert('Login correcto');
         localStorage.setItem('token', respuesta.token);
+        this.acceso=true;
     });
   }
 

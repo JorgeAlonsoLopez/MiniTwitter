@@ -1,1 +1,17 @@
-<p>mostrar works!</p>
+<h1>Listado de tweets</h1>
+<div>
+  <div *ngFor="let elemento of listado">
+    <p>Autor: {{ elemento.user.username }}</p>
+    <p>{{ elemento.mensaje }}</p>
+    <br />
+    <div>
+      <p>Likes: {{ elemento.likes.length }}</p>
+      <div *ngIf="elemento.likes.length > 0">
+        <div *ngFor="let like of elemento.likes">
+          <p>{{ like.username }}</p>
+        </div>
+      </div>
+    </div>
+    <p>***********</p>
+  </div>
+</div>
