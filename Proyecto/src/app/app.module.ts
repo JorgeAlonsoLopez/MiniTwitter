@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistroComponent } from './registro/registro.component';
 import { LoginService } from './services/login.service';
 import { RegistroService } from './services/registro.service';
+import { MostrarComponent } from './mostrar/mostrar.component';
 
 
 
@@ -20,7 +21,8 @@ import { RegistroService } from './services/registro.service';
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    MostrarComponent
   ],
   imports: [
     BrowserModule,
