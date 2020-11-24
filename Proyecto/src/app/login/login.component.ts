@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginDto } from '../dto/LoginDto';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  usuario: LoginDto;
+
+  constructor(private loginService: LoginService) { 
+    this.usuario = new LoginDto('', '');
+  }
 
   ngOnInit(): void {
   }
+
+  login() {
+    this.loginService.login(this.usuario).subscribe(respuesta => {
+        alert('API TOKEN ' + respuesta.token);
+        localStorage.setItem('token', respuesta.token);
+    });
+  }
+
 
 }

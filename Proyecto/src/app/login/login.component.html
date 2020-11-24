@@ -1,1 +1,16 @@
-<p>login works!</p>
+
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="container">
+    <div>
+      Email
+      <input type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true" />
+    </div>
+    <div>
+      Conraseña
+      <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" required />
+    </div>
+    <div>
+      <input type="button" (click)="login()" value="Login"/>
+    </div>
+
+
+  </div>
