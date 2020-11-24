@@ -21,7 +21,6 @@ export class RegistroComponent implements OnInit {
   new() {
     this.registroService.new(this.usuario).subscribe(respuesta => {
         alert('Registro correcto');
-        //localStorage.setItem('token', respuesta.token);
     });
   }
 
