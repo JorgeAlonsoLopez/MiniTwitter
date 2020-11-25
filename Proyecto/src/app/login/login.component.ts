@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
     this.loginService.login(this.usuario).subscribe(respuesta => {
         alert('Login correcto');
         localStorage.setItem('token', respuesta.token);
-        console.log(respuesta.token);
         this.acceso=true;
     });
   }

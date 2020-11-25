@@ -21,7 +21,6 @@ export class LikeService {
   getFav(id:string): Observable<Tweet> {
     this.urlM = url+id;
     let consult:Observable<Tweet> = this.http.post<Tweet>(this.urlM, null, requestOptions);
-    console.log(JSON.stringify(consult));
     return consult;
   }
 }
