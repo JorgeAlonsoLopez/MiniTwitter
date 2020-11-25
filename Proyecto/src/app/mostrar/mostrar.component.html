@@ -1,3 +1,8 @@
+<div>
+  <button onClick="window.location.reload()">Actualizar</button>
+  <a type="button" [routerLink]="['../new']" >Nuevo tweet</a>
+  <a type="button" [routerLink]="['../']" id="salir"  onclick="salir">Salir</a>
+</div>
 <h1>Listado de tweets</h1>
 <div>
   <div *ngFor="let elemento of listado">

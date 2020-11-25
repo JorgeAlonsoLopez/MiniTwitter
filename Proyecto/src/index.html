@@ -18,14 +18,25 @@
       if(url != "http://localhost:4200/"){
         document.getElementById("menu").style.display = "none";
       }
-      var enl1 = document.getElementById('registro');
-      var enl2 = document.getElementById('login');
-      enl1.onclick = acultar;
-      enl2.onclick = acultar;
-      function acultar() {
+      let enl1 = document.getElementById('registro');
+      let enl2 = document.getElementById('login');
+      enl1.onclick = ocultar;
+      enl2.onclick = ocultar;
+      function ocultar() {
         document.getElementById("menu").style.display = "none";
       }
+      let salida = document.getElementById('salir');
+      salida.onclick = salir;
+      function salir() {
+        document.getElementById("menu").style.display = "block";
+      }
+      // let relo = document.getElementById('reload');
+      // relo.onclick = reload;
+      // function reload() {
+      //   window.location.reload();
+      // }
     };
+
   </script>
 </body>
 </html>

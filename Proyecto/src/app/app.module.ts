@@ -17,7 +17,8 @@ import { MostrarComponent } from './mostrar/mostrar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MostrarService } from './services/mostrar.service';
 import { LikeService } from './services/like.service';
-
+import { NuevoComponent } from './nuevo/nuevo.component';
+import { NuevoService } from './services/nuevo.service';
 
 const router:Routes = [
   {
@@ -31,6 +32,10 @@ const router:Routes = [
   {
     path: 'all',
     component:MostrarComponent
+  },
+  {
+    path: 'new',
+    component:NuevoComponent
   }
 ];
 
@@ -39,7 +44,8 @@ const router:Routes = [
     AppComponent,
     LoginComponent,
     RegistroComponent,
-    MostrarComponent
+    MostrarComponent,
+    NuevoComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,7 @@ const router:Routes = [
     FlexLayoutModule,
     RouterModule.forRoot(router)
   ],
-  providers: [LoginService,RegistroService,MostrarService,LikeService],
+  providers: [LoginService,RegistroService,MostrarService,LikeService,NuevoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

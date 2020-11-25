@@ -1,0 +1,7 @@
+<h2>Nuevo tweet</h2>
+<div>
+  <input type="text" [(ngModel)]="tweetNuevo.mensaje" #msg="ngModel" required />
+</div>
+<div>
+  <input type="button" (click)="nuevo()" [routerLink]="['../all']" value="Enviar" />
+</div>
