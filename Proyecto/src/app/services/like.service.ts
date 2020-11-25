@@ -7,8 +7,7 @@ const url = 'https://www.minitwitter.com:3001/apiv1/tweets/like/';
 
 const requestOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json',
-    Authorization: 'Bearer ' + localStorage.getItem('token'),
+    Authorization: 'Bearer ' + localStorage.getItem('token')
   }),
 };
 
@@ -19,8 +18,10 @@ export class LikeService {
   urlM:string;
   constructor(private http: HttpClient) {}
 
-  getFav(id:number): Observable<Tweet> {
+  getFav(id:string): Observable<Tweet> {
     this.urlM = url+id;
-    return this.http.post<Tweet>(this.urlM, requestOptions);
+    let consult:Observable<Tweet> = this.http.post<Tweet>(this.urlM, null, requestOptions);
+    console.log(JSON.stringify(consult));
+    return consult;
   }
 }

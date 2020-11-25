@@ -24,10 +24,10 @@ export class MostrarComponent implements OnInit {
   }
 
   fav(id:number){
-    this.likeService.getFav(id).subscribe((resp) => {
-      alert(resp.mensaje);
+    let id2 = id.toString();
+    this.likeService.getFav(id2).subscribe((resp) => {
+      alert("El tweet se ha marcado cómo favorito");
     });
   }
 
 }
-//alert(localStorage.getItem('token'));
