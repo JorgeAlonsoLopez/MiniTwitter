@@ -11,5 +11,21 @@
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+  <script>
+    window.onload = function (){
+      let url = window.location.href;
+      console.log(url);
+      if(url != "http://localhost:4200/"){
+        document.getElementById("menu").style.display = "none";
+      }
+      var enl1 = document.getElementById('registro');
+      var enl2 = document.getElementById('login');
+      enl1.onclick = acultar;
+      enl2.onclick = acultar;
+      function acultar() {
+        document.getElementById("menu").style.display = "none";
+      }
+    };
+  </script>
 </body>
 </html>
