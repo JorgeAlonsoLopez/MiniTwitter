@@ -15,4 +15,6 @@ export class AppComponent {
   elecc() {
     this.menu=false;
   }
+
+
 }

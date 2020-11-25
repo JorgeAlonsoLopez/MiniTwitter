@@ -1,7 +1,7 @@
 <div>
   <button onClick="window.location.reload()">Actualizar</button>
   <a type="button" [routerLink]="['../new']" >Nuevo tweet</a>
-  <a type="button" [routerLink]="['../']" id="salir"  onclick="salir">Salir</a>
+  <button (click)="exit()">Cerrar sesión</button>
 </div>
 <h1>Listado de tweets</h1>
 <div>

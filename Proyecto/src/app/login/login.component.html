@@ -8,6 +8,7 @@
     <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" required />
   </div>
   <div>
+    <button (click)="exit()">Cancelar</button>
     <input type="button" (click)="login()" value="Login" />
   </div>
 
