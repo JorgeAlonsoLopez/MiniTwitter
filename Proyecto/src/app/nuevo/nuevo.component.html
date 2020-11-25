@@ -1,8 +1,11 @@
-<h2>Nuevo tweet</h2>
-<div>
-  <input type="text" [(ngModel)]="tweetNuevo.mensaje" #msg="ngModel" required />
+<div class="area" id="areaTw">
+  <mat-form-field>
+    <mat-label>Escriba el contenido del nuevo tweet</mat-label>
+    <textarea  matInput placeholder="Contenido del nuevo tweet" type="text" [(ngModel)]="tweetNuevo.mensaje" #msg="ngModel" required ></textarea>
+  </mat-form-field>
 </div>
-<div>
-  <input type="button" (click)="nuevo()" [routerLink]="['../all']" value="Enviar" />
-  <button (click)="exit()">Cancelar</button>
+<div class="area">
+  <!-- <button mat-raised-button (click)="nuevo()" [routerLink]="['../all']">Enviar</button> -->
+  <button mat-raised-button (click)="nuevo()">Enviar</button>
+  <!-- <button mat-raised-button (click)="exit()">Cancelar</button> -->
 </div>

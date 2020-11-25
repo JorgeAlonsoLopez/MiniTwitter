@@ -1,9 +1,22 @@
-<div>
-  <button onClick="window.location.reload()">Actualizar</button>
-  <a type="button" [routerLink]="['../new']" >Nuevo tweet</a>
-  <button (click)="exit()">Cerrar sesión</button>
+<div><samp></samp></div>
+<div class="botonera">
+  <button mat-raised-button onClick="window.location.reload()">Actualizar</button>
+  <div id="twt">
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="centrado"> Nuevo tweet </mat-panel-title>
+        </mat-expansion-panel-header>
+        <!-- <p>I'm visible because I am open</p> -->
+        <app-nuevo></app-nuevo>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <button mat-raised-button (click)="exit()">Cerrar sesión</button>
 </div>
-<h1>Listado de tweets</h1>
+
+<h1 id="tit">Listado de tweets</h1>
+
 <div>
   <div *ngFor="let elemento of listado">
     <p>Autor: {{ elemento.user.username }}</p>
@@ -17,7 +30,9 @@
         </div>
       </div>
     </div>
-    <button (click)="fav(elemento.id)">like</button>
+    <button (click)="fav(elemento.id)" mat-icon-button color="warn">
+      <mat-icon>favorite</mat-icon>
+    </button>
     <p>***********</p>
   </div>
 </div>

@@ -1,19 +1,23 @@
 <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="container">
   <div>
-    Email
-    <input type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true" />
+    <mat-form-field class="col-12">
+      <input matInput placeholder="Email" type="email" [(ngModel)]="usuario.email" #em="ngModel" required [email]="true">
+      <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
   </div>
   <div>
-    Conraseña
-    <input type="password" [(ngModel)]="usuario.password" #pwd="ngModel" required />
+    <mat-form-field class="col-12">
+      <input matInput placeholder="Contraseña" type="password" [(ngModel)]="usuario.password" #pwd="ngModel" required>
+      <mat-icon matSuffix>lock</mat-icon>
+    </mat-form-field>
   </div>
   <div>
-    <button (click)="exit()">Cancelar</button>
-    <input type="button" (click)="login()" value="Login" />
+    <!-- <button mat-raised-button (click)="exit()">Cancelar</button> -->
+    <button mat-raised-button (click)="login()" onclick="ocultar" id="login">Login</button>
   </div>
-
+<!--
   <div *ngIf="acceso">
-    <a type="button" [routerLink]="['../all']">Acceder</a>
+    <button mat-raised-button [routerLink]="['../all']">Acceder</button>
   </div>
-
+-->
 </div>

@@ -22,15 +22,19 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginService.login(this.usuario).subscribe(respuesta => {
-        alert('Login correcto');
+      if(respuesta.token!=""){
         localStorage.setItem('token', respuesta.token);
-        this.acceso=true;
+        //this.acceso=true;
+        this.router.navigate(['/all']).then(() => {
+          window.location.reload();
+        });
+      }
+
     });
   }
 
   exit(){
-    this.router.navigate(['../'])
-      .then(() => {
+    this.router.navigate(['../']).then(() => {
     window.location.reload();
   });
   }

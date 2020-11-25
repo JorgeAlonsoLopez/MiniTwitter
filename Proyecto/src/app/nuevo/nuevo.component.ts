@@ -19,7 +19,7 @@ export class NuevoComponent implements OnInit {
 
   nuevo() {
     this.nuevoService.new(this.tweetNuevo).subscribe(respuesta => {
-
+      window.location.reload();
     });
   }
 
