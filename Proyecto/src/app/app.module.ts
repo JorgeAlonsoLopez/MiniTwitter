@@ -15,6 +15,8 @@ import { LoginService } from './services/login.service';
 import { RegistroService } from './services/registro.service';
 import { MostrarComponent } from './mostrar/mostrar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MostrarService } from './services/mostrar.service';
+import { LikeService } from './services/like.service';
 
 
 const router:Routes = [
@@ -51,7 +53,7 @@ const router:Routes = [
     FlexLayoutModule,
     RouterModule.forRoot(router)
   ],
-  providers: [LoginService,RegistroService],
+  providers: [LoginService,RegistroService,MostrarService,LikeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

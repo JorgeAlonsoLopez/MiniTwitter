@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   menu:boolean = true;
   title = 'Proyecto';
+
   ngOnInit(): void {
 
   }
