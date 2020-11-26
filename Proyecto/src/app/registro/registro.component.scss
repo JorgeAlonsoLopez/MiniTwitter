@@ -9,7 +9,6 @@
   font-size: 28pt;
   margin-top: 40px;
   margin-bottom: 60px;
-  color: white;
 }
 
 .carta button{
@@ -21,22 +20,21 @@
 
 .espaciado{
   display: block;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
-#registro{
+button{
   border-radius: 50px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 18pt;
-  background-color: rgb(23, 103, 151);
+  font-size: 20pt;
   color: white;
+  background-color:rgb(23, 103, 151);
 }
 
-.text{
-  color: rgb(255, 255, 255);
-  font-size: 14pt;
-  margin-bottom: 15px;
+#btnCrear{
+  padding-left: 30px;
+  padding-right: 30px;
 }

@@ -1,0 +1,44 @@
+.botonera{
+display: flex;
+margin-bottom: 15px;
+justify-content: space-evenly;
+margin: auto;
+align-items: flex-start;
+margin-top:  30px;
+margin-bottom: 20px;
+}
+
+#twt{
+  width: 25%;
+}
+
+#tit{
+  text-align: center;
+  font-size: 22pt;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card{
+  width: 400px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.contenedor{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-left: -2%;
+}
+
+.btnTw{
+  color: white;
+  background-color: rgb(82, 166, 230);
+  border-bottom: rgb(23, 103, 151);
+  font-size: 16pt;
+  padding: 5px,5px;
+}

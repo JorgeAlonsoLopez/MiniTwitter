@@ -6,8 +6,28 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
+  <script>
+    window.onload = function (){
+      let url = window.location.href;
+      console.log(url);
+      if(url != "http://localhost:4200/"){
+        document.getElementById("menu").style.display = "none";
+      }
+      let enl1 = document.getElementById('registro');
+      let enl2 = document.getElementById('login');
+      enl1.onclick = ocultar;
+      enl2.onclick = ocultar;
+      function ocultar() {
+        document.getElementById("menu").style.display = "none";
+      }
+    };
+
+  </script>
 </body>
 </html>

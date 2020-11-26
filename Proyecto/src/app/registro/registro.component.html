@@ -1,0 +1,25 @@
+<mat-card class="carta">
+  <h2>Nuevo usuario</h2>
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="container">
+    <mat-form-field class="col-12">
+      <input matInput placeholder="Nombre de usuario" type="text" [(ngModel)]="usuario.username" #pwd="ngModel"
+        required>
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="col-12">
+      <input matInput placeholder="Email" type="email" [(ngModel)]="usuario.email" #em="ngModel" required
+        [email]="true">
+        <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+    <mat-form-field class="col-12">
+      <input matInput placeholder="Contraseña" type="password" [(ngModel)]="usuario.password" #pwd="ngModel" required>
+      <mat-icon matSuffix>lock</mat-icon>
+    </mat-form-field>
+    <div>
+      <span class="espaciado"></span>
+      <button mat-raised-button (click)="exit()">Cancelar</button>
+      <button mat-raised-button (click)="new()" id="btnCrear">Crear usuario</button>
+    </div>
+  </div>
+
+</mat-card>
