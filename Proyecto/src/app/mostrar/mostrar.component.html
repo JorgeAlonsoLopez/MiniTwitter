@@ -1,6 +1,8 @@
 <div><samp></samp></div>
 <div class="botonera">
-  <button mat-raised-button onClick="window.location.reload()">Actualizar</button>
+  <button mat-raised-button onClick="window.location.reload()" class="btnTw">
+    Actualizar
+  </button>
   <div id="twt">
     <mat-accordion>
       <mat-expansion-panel>
@@ -12,27 +14,39 @@
       </mat-expansion-panel>
     </mat-accordion>
   </div>
-  <button mat-raised-button (click)="exit()">Cerrar sesión</button>
+  <button mat-raised-button (click)="exit()" class="btnTw">Cerrar sesión</button>
 </div>
 
 <h1 id="tit">Listado de tweets</h1>
 
-<div>
+<div class="contenedor">
   <div *ngFor="let elemento of listado">
-    <p>Autor: {{ elemento.user.username }}</p>
-    <p>{{ elemento.mensaje }}</p>
-    <br />
-    <div>
-      <p>Likes: {{ elemento.likes.length }}</p>
-      <div *ngIf="elemento.likes.length > 0">
-        <div *ngFor="let like of elemento.likes">
-          <p>{{ like.username }}</p>
-        </div>
-      </div>
-    </div>
-    <button (click)="fav(elemento.id)" mat-icon-button color="warn">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <p>***********</p>
+    <mat-card class="card">
+      <mat-card-header>
+        <mat-card-title>{{ elemento.user.username }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          {{ elemento.mensaje }}
+        </p>
+      </mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <p>Likes: {{ elemento.likes.length }}</p>
+          </mat-expansion-panel-header>
+          <div *ngIf="elemento.likes.length > 0">
+            <div *ngFor="let like of elemento.likes">
+              <p>{{ like.username }}</p>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-card-actions>
+        <button (click)="fav(elemento.id)" mat-icon-button color="warn">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
