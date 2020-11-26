@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Tweet } from '../modelo/Tweet.interface';
 import { MostrarService } from '../services/mostrar.service';
 import { LikeService } from '../services/like.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-mostrar',
@@ -11,10 +13,13 @@ import { LikeService } from '../services/like.service';
 export class MostrarComponent implements OnInit {
   listado: Tweet[] = [];
 
-  constructor(private mostrarService: MostrarService, private likeService: LikeService) {}
+
+
+  constructor(private mostrarService: MostrarService, private likeService: LikeService,private router: Router) {}
 
   ngOnInit(): void {
     this.cargar();
+
   }
 
   cargar() {
@@ -29,5 +34,14 @@ export class MostrarComponent implements OnInit {
       alert("El tweet se ha marcado cómo favorito");
     });
   }
+
+  exit(){
+    this.router.navigate(['../'])
+      .then(() => {
+    window.location.reload();
+  });
+  }
+
+
 
 }

@@ -1,0 +1,42 @@
+.carta{
+  margin: auto;
+  width: 40%;
+  background-color: rgba(46, 57, 63, 0.397);
+  text-align: center;
+  margin-top: 4%;
+}
+.carta h2{
+  font-size: 28pt;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.carta button{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 14pt;
+  margin-bottom: 40px;
+}
+
+.espaciado{
+  display: block;
+  margin-bottom: 60px;
+}
+
+#registro{
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18pt;
+  background-color: rgb(23, 103, 151);
+  color: white;
+}
+
+.text{
+  color: rgb(255, 255, 255);
+  font-size: 14pt;
+  margin-bottom: 15px;
+}

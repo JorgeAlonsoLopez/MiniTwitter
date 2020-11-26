@@ -7,7 +7,6 @@ const url = 'https://www.minitwitter.com:3001/apiv1/tweets/all';
 
 const requestOptions = {
   headers: new HttpHeaders({
-    'Content-Type': 'application/json',
     Authorization: 'Bearer ' + localStorage.getItem('token')
   }),
 };
