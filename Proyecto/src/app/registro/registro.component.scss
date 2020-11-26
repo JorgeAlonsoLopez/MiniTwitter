@@ -1,7 +1,7 @@
 .carta{
   margin: auto;
   width: 40%;
-  background-color: rgb(148, 148, 148);
+  background-color: rgba(46, 57, 63, 0.397);
   text-align: center;
   margin-top: 4%;
 }
@@ -31,6 +31,10 @@ button{
   padding-bottom: 5px;
   font-size: 20pt;
   color: white;
-  background-color: rgb(50, 129, 189);
-  border-bottom: rgb(15, 67, 99);
+  background-color:rgb(23, 103, 151);
+}
+
+#btnCrear{
+  padding-left: 30px;
+  padding-right: 30px;
 }
