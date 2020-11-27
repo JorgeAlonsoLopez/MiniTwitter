@@ -22,20 +22,28 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginService.login(this.usuario).subscribe(respuesta => {
-      if(respuesta.token!=""){
+      if(respuesta.token!=undefined){
         localStorage.setItem('token', respuesta.token);
         //this.acceso=true;
         this.router.navigate(['/all']).then(() => {
           window.location.reload();
         });
       }
+    });
+  }
 
+  permitido(){
+    this.loginService.login(this.usuario).subscribe(respuesta => {
+      if(respuesta.token!=undefined){
+        this.acceso = true;
+      }
     });
   }
 
   exit(){
     this.router.navigate(['../']).then(() => {
-    window.location.reload();
+      localStorage.deleteItem('token');
+      window.location.reload();
   });
   }
 

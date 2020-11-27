@@ -12,6 +12,9 @@
     </mat-form-field>
   </div>
   <div>
+    <button mat-raised-button (click)="permitido()" id="comprobar">Comprobar</button>
+  </div>
+  <div *ngIf="acceso">
     <!-- <button mat-raised-button (click)="exit()">Cancelar</button> -->
     <button mat-raised-button (click)="login()" onclick="ocultar" id="login">Login</button>
   </div>
